@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 76" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Kamadhenu emblem">
+  <!-- chalice of abundance (gold) -->
+  <g stroke="#c2871d">
+    <path d="M9 23 C 9 40, 21 45, 32 45 C 43 45, 55 40, 55 23"/>
+    <path d="M9 23 C 8 19, 9 17, 11 16"/>
+    <path d="M55 23 C 56 19, 55 17, 53 16"/>
+  </g>
+  <!-- sun-orb of prosperity (maroon) -->
+  <circle cx="32" cy="29" r="4.6" fill="#7c2433" stroke="none"/>
+  <!-- lotus throne (green) -->
+  <g stroke="#2f6b4d">
+    <path d="M32 47 C 29 53, 29 60, 32 64 C 35 60, 35 53, 32 47 Z"/>
+    <path d="M28 51 C 22 55, 20 60, 22 64 C 27 62, 30 57, 30.5 52"/>
+    <path d="M36 51 C 42 55, 44 60, 42 64 C 37 62, 34 57, 33.5 52"/>
+  </g>
+</svg>

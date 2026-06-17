@@ -1,0 +1,119 @@
+/* ============================================================
+   KAMADHENU CAPITAL : DESIGN
+   All colors, fonts, spacing live here. Words live in content/content.js.
+   Change the palette in one place via the variables below.
+   ============================================================ */
+:root{
+  --bg:#fbf7ef;        /* warm ivory */
+  --bg2:#f5edde;       /* soft sand */
+  --card:#fffdf8;
+  --ink:#1f1b14;       /* warm near-black, high contrast */
+  --soft:#6b6354;      /* muted brown-grey */
+  --line:#e8dcc6;      /* hairline */
+  --gold:#c2871d;      /* marigold */
+  --gold-dk:#a06e12;
+  --maroon:#7c2433;    /* deep red, small accents */
+  --green:#2f6b4d;     /* prosperity green, small accents */
+  --r:16px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:880px;margin:0 auto;padding:0 28px;}
+a{color:var(--gold-dk);text-decoration:none;}
+a:hover{color:var(--maroon);}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.12;letter-spacing:-.01em;}
+.eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dk);margin:0 0 18px;}
+
+/* ---- logo / emblem ---------------------------------------- */
+.logo{display:flex;align-items:center;gap:11px;}
+.logo .wm{font-family:'Fraunces',serif;font-weight:600;font-size:19px;letter-spacing:.01em;color:var(--ink);}
+.logo .wm b{color:var(--gold);font-weight:600;}
+/* multi-color emblem: colors live in assets/logo.svg */
+.emblem{display:inline-block;}
+.emblem-nav{width:30px;height:auto;}
+.emblem-creed{width:42px;height:auto;flex:none;}
+
+/* ---- top bar ---------------------------------------------- */
+header.bar{position:sticky;top:0;z-index:10;background:rgba(251,247,239,.86);backdrop-filter:blur(9px);border-bottom:1px solid var(--line);}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;}
+nav a{color:var(--soft);font-size:14px;font-weight:500;margin-left:24px;}
+nav a:hover{color:var(--ink);}
+@media(max-width:680px){nav{display:none;}}
+
+/* ---- hero ------------------------------------------------- */
+.hero{text-align:center;padding:84px 0 18px;}
+.hero h1{font-size:clamp(34px,5.8vw,58px);margin:0 0 24px;}
+.hero h1 em{font-style:italic;color:var(--gold-dk);}
+.hero .lead{font-size:clamp(18px,2.3vw,21px);color:var(--soft);max-width:640px;margin:0 auto 30px;}
+.facts{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;}
+.pill{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:14px;color:var(--soft);}
+.pill b{color:var(--ink);font-weight:600;}
+
+.creed{display:flex;align-items:center;gap:18px;justify-content:center;max-width:660px;margin:46px auto 0;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 26px;}
+.creed p{margin:0;font-family:'Fraunces',serif;font-style:italic;font-size:17px;color:var(--ink);line-height:1.5;}
+
+/* ---- motif divider ---------------------------------------- */
+.divider{display:flex;align-items:center;justify-content:center;gap:16px;padding:54px 0 0;}
+.divider::before,.divider::after{content:"";height:1px;width:70px;background:linear-gradient(to var(--d,right),transparent,var(--line));}
+.divider::before{--d:left;}
+.orb{position:relative;width:12px;height:12px;border:2px solid var(--green);border-radius:50%;box-sizing:border-box;}
+.orb::after{content:"";position:absolute;top:50%;left:50%;width:4px;height:4px;border-radius:50%;background:var(--maroon);transform:translate(-50%,-50%);}
+
+/* ---- sections --------------------------------------------- */
+section{padding:50px 0;}
+section h2{font-size:clamp(26px,3.6vw,36px);margin:0 0 12px;text-align:center;}
+.sub{color:var(--soft);max-width:600px;margin:0 auto 38px;text-align:center;}
+
+/* two arms */
+.arms{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media(max-width:680px){.arms{grid-template-columns:1fr;}}
+.arm{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;display:flex;flex-direction:column;}
+.arm .rn{font-family:'Fraunces',serif;font-size:15px;font-weight:600;letter-spacing:.12em;color:var(--gold);margin:0 0 14px;}
+/* small color cue: games arm picks up prosperity green */
+.arms .arm:nth-child(2) .rn{color:var(--green);}
+.arm h3{font-size:24px;margin:0 0 4px;}
+.arm .meta{font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin:0 0 14px;}
+.arm p{margin:0 0 18px;color:var(--soft);font-size:15.5px;}
+.arm .holds{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--ink);}
+.arm .holds span{color:var(--soft);}
+
+/* thesis tiles */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+@media(max-width:720px){.grid3{grid-template-columns:1fr;}}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;}
+.tile .ix{font-family:'Fraunces',serif;font-size:15px;color:var(--gold);font-weight:600;}
+.tile h3{font-size:20px;margin:6px 0 8px;}
+.tile p{margin:0;color:var(--soft);font-size:15.5px;}
+
+/* portfolio */
+.pgroup{font-family:'Fraunces',serif;font-style:italic;color:var(--gold-dk);font-size:18px;margin:34px 0 4px;text-align:center;}
+.co{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:22px 0;border-bottom:1px solid var(--line);}
+.co:first-of-type{border-top:1px solid var(--line);}
+.co .l h3{font-size:23px;margin:0 0 3px;}
+.co .l .tag{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dk);}
+.co .r{color:var(--soft);font-size:15.5px;max-width:54%;text-align:right;}
+@media(max-width:560px){.co{flex-direction:column;gap:8px;}.co .r{max-width:100%;text-align:left;}}
+.priv{text-align:center;color:var(--soft);font-style:italic;font-family:'Fraunces',serif;margin-top:10px;}
+
+/* team */
+.people{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media(max-width:560px){.people{grid-template-columns:1fr;}}
+.person{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;text-align:left;}
+.person h3{font-size:21px;margin:0 0 4px;}
+.person .role{color:var(--gold-dk);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
+.person .bio{margin:12px 0 0;color:var(--soft);font-size:14.5px;line-height:1.55;}
+
+/* contact */
+.contact{text-align:center;background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.contact .inner{padding:64px 0;}
+.cta{display:inline-block;margin-top:8px;background:var(--gold);color:#241a08;font-weight:600;font-size:16px;
+  padding:14px 30px;border-radius:999px;transition:background .15s,transform .15s;}
+.cta:hover{background:var(--gold-dk);color:#fff;transform:translateY(-1px);}
+
+footer{padding:34px 0 46px;}
+footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+footer .muted{color:var(--soft);font-size:13px;}
